@@ -16,8 +16,13 @@ export async function fetchRevenue() {
     // Artificially delay a response for demo purposes.
     // Don't do this in production :)
 
+<<<<<<< HEAD
     console.log("Fetching revenue data...");
     await new Promise((resolve) => setTimeout(resolve, 3000));
+=======
+    // console.log("Fetching revenue data...");
+    // await new Promise((resolve) => setTimeout(resolve, 3000));
+>>>>>>> ea9bd6c8b790e3257555d3964d2fa24f638744df
 
     const data = await sql<Revenue[]>`SELECT * FROM revenue`;
 
@@ -25,7 +30,11 @@ export async function fetchRevenue() {
 
     return data;
   } catch (error) {
+<<<<<<< HEAD
     console.error("Database Error:", error);
+=======
+    // console.error("Database Error:", error);
+>>>>>>> ea9bd6c8b790e3257555d3964d2fa24f638744df
     throw new Error("Failed to fetch revenue data.");
   }
 }
